@@ -2,6 +2,20 @@
  * @author Vlasyuk Sergey
  *
  */
+
+/**
+ Example of home task "Harbor".
+ Basic data:
+ 1. Create a Harbor, that should have storage with container capacity = 100. On the start stage storage is empty.
+ Harbor also should have 4 wharfs for ships loading/unloading.
+ 2. Create ships(threads). Each ship should have own container capacity and task: loading or unloading.
+ 3. All ships should be on the road and wait when someone of wharfs becomes free.
+ In this case ship goes to the wharf in harbor and checks - does storage in harbor has enough space or containers to complete shipment task?
+ In case storage has enough space or containers - ship comes back to the road and waits.
+ Otherwise - ship should realize its task, change task to opposite and come back on the road.
+ 4. Synchronizers from Concurrent library should be used for the task.
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Phaser;
